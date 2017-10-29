@@ -66,7 +66,7 @@ public class ConcesionarioGUI implements Serializable {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setTitle("Concesionario IES Gran Capitán");
+		frame.setTitle("Concesionario IES Gran CapitÃ¡n");
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -159,7 +159,7 @@ public class ConcesionarioGUI implements Serializable {
 		mntmBaja.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (concesionarioCoches.isEmpty()) {
-					JOptionPane.showMessageDialog(null, "El concesionario esta vacio.", "Información",
+					JOptionPane.showMessageDialog(null, "El concesionario esta vacio.", "InformaciÃ³n",
 							JOptionPane.INFORMATION_MESSAGE);
 					return;
 				}
@@ -174,7 +174,7 @@ public class ConcesionarioGUI implements Serializable {
 		mntmMostrarConcesionario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (concesionarioCoches.isEmpty()) {
-					JOptionPane.showMessageDialog(null, "No hay concesionario que mostrar.", "Información",
+					JOptionPane.showMessageDialog(null, "No hay concesionario que mostrar.", "InformaciÃ³n",
 							JOptionPane.INFORMATION_MESSAGE);
 					return;
 				}
@@ -192,7 +192,7 @@ public class ConcesionarioGUI implements Serializable {
 		mntmPorMatricula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (concesionarioCoches.isEmpty()) {
-					JOptionPane.showMessageDialog(null, "El concesionario esta vacio.", "Información",
+					JOptionPane.showMessageDialog(null, "El concesionario esta vacio.", "InformaciÃ³n",
 							JOptionPane.INFORMATION_MESSAGE);
 					return;
 				}
@@ -206,7 +206,7 @@ public class ConcesionarioGUI implements Serializable {
 		mntmPorColor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (concesionarioCoches.isEmpty()) {
-					JOptionPane.showMessageDialog(null, "El concesionario esta vacio.", "Información",
+					JOptionPane.showMessageDialog(null, "El concesionario esta vacio.", "InformaciÃ³n",
 							JOptionPane.INFORMATION_MESSAGE);
 					return;
 				}
@@ -244,7 +244,7 @@ public class ConcesionarioGUI implements Serializable {
 	private void nuevoConcesionario() {
 		if (concesionarioCoches.isModificado()) {
 			Object[] options = { "SI", "NO", "CANCELAR" };
-			int respuesta = JOptionPane.showOptionDialog(null, "No has guardado, ¿Desea Guardar?", "NO HAS GUARDADO",
+			int respuesta = JOptionPane.showOptionDialog(null, "No has guardado, Â¿Desea Guardar?", "NO HAS GUARDADO",
 					JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
 			if (respuesta == 0) {
 				guardarComo();
@@ -278,7 +278,7 @@ public class ConcesionarioGUI implements Serializable {
 	private void abrirConcesionario() {
 		if (concesionarioCoches.isModificado()) {
 			Object[] options = { "SI", "NO", "CANCEL" };
-			int respuesta = JOptionPane.showOptionDialog(null, "No has guardado, ¿Desea Guardar?", "NO HAS GUARDADO",
+			int respuesta = JOptionPane.showOptionDialog(null, "No has guardado, Â¿Desea Guardar?", "NO HAS GUARDADO",
 					JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
 			if (respuesta == 0) {
 				guardarComo();
@@ -349,7 +349,7 @@ public class ConcesionarioGUI implements Serializable {
 			Fichero.comprobarFichero(guardarComo.getSelectedFile());
 			if (Fichero.getFichero().exists()) {
 				Object[] options = { "Si", "No" };
-				int respuesta = JOptionPane.showOptionDialog(null, "El archivo ya existe, ¿Desea Sobreescribir?",
+				int respuesta = JOptionPane.showOptionDialog(null, "El archivo ya existe, Â¿Desea Sobreescribir?",
 						"Guardando", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options,
 						options[0]);
 				if (respuesta == 0) {
@@ -372,11 +372,13 @@ public class ConcesionarioGUI implements Serializable {
 			concesionarioCoches.setModificado(false);
 		}
 	}
-
+	/**
+	* Despliega un mensaje de confirmacin para salir del programa
+	*/
 	private void salir() {
 		if (concesionarioCoches.isModificado()) {
 			Object[] options = { "SI", "NO", "CANCELAR" };
-			int respuesta = JOptionPane.showOptionDialog(null, "No has guardado, ¿Desea Guardar?", "NO HAS GUARDADO",
+			int respuesta = JOptionPane.showOptionDialog(null, "No has guardado, Â¿Desea Guardar?", "NO HAS GUARDADO",
 					JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
 			if (respuesta == 0) {
 				guardarComo();
